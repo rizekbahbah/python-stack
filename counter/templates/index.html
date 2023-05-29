@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Counter</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-transparent">
+    </nav>
+    <br>
+    <div class="container jumbotron text-center">
+        <h1> Session Counter </h1>
+    </div> 
+    <div class="container text-center">
+        <h1 class=" text-center text-lg-center">{{session['count']}} times(s)</h1>
+        <a href="/" name="button" class="btn btn-primary">Click</a>
+        <a href="/add2" name="button" class="btn btn-warning">Add2</a>
+        <a href="/reset" class="btn btn-danger">Reset</a>
+
+    </div>
+</body>
+</html>
