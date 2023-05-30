@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Results</title>
+</head>
+<body>
+    <div class="container col-4 bg-secondary rounded m-3 p-5 mx-auto">
+        <h1 class=" mb-4">Thank you!</h1>
+        <h4 class="text-light ml-4"><span class="text-dark">Name: </span>{{ request.session.name }}</h4>
+        <h4 class="text-light ml-4"><span class="text-dark">Dojo Location: </span>{{ request.session.dojo_location }}</h4>
+        <h4 class="text-light ml-4"><span class="text-dark">Favorite Language: </span>{{ request.session.favorite_language }}</h4>
+        <h4 class="text-light ml-4"><span class="text-dark">Comments: </span>{{ request.session.comments }}</h4>
+        <a href="http://localhost:8000" class="btn btn-dark mt-4">Go Back</a>
+    </div>
+</body>
+</html>
