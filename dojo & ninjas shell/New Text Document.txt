@@ -1,0 +1,43 @@
+python manage.py makemigrations
+python manage.py migrate
+python manage.py shell
+from appOne.models import *
+
+dojo.objects.create(name="Dojo_Virginia", city="Virginia", state="VA")
+dojo.objects.create(name="Dojo_California", city="California", state="CA")
+dojo.objects.create(name="Dojo_Chicago", city="Chicago", state="IL")
+
+
+c = dojo.objects.get(id=1)
+c.delete()
+c = dojo.objects.get(id=2)
+c.delete()
+c = dojo.objects.get(id=3)
+c.delete()
+
+dojo.objects.create(name="Dojo_Virginia", city="Virginia", state="VA")
+dojo.objects.create(name="Dojo_California", city="California", state="CA")
+dojo.objects.create(name="Dojo_Chicago", city="Chicago", state="IL")
+
+ninjas.objects.create(dojo=dojo.objects.get(id=4), first_name="Larry", last_name="Flynt")
+ninjas.objects.create(dojo=dojo.objects.get(id=4), first_name="Tarry", last_name="Klynt")
+ninjas.objects.create(dojo=dojo.objects.get(id=4), first_name="Barry", last_name="Plynt")
+
+ninjas.objects.create(dojo=dojo.objects.get(id=5), first_name="Bob", last_name="Bob")
+ninjas.objects.create(dojo=dojo.objects.get(id=5), first_name="Tob", last_name="Tob")
+ninjas.objects.create(dojo=dojo.objects.get(id=5), first_name="Nob", last_name="Nob")
+
+ninjas.objects.create(dojo=dojo.objects.get(id=6), first_name="Harry", last_name="Harry")
+ninjas.objects.create(dojo=dojo.objects.get(id=6), first_name="Berry", last_name="Berry")
+ninjas.objects.create(dojo=dojo.objects.get(id=6), first_name="Carry", last_name="Carry")
+
+ninjas.objects.filter(dojo=dojo.objects.get(id=4))
+ninjas.objects.filter(dojo=dojo.objects.get(id=5))
+ninjas.objects.filter(dojo=dojo.objects.get(id=6))
+
+exit()
+1
+""
+python manage.py migrate
+from appOne.models import *
+dojo.objects.create(name="Texas_Dojo", city="Texas", state="TX", desc="")
